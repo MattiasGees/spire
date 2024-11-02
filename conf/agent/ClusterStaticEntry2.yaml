@@ -1,0 +1,10 @@
+apiVersion: spire.spiffe.io/v1alpha1
+kind: ClusterStaticEntry
+metadata:
+  name: venafi-laptop-workload
+spec:
+  className: spire-spire
+  spiffeID: "spiffe://spire.internal.mattiasgees.be/static/macbook/venafi/workload"
+  parentID: "spiffe://spire.internal.mattiasgees.be/spire/agent/x509pop/2db2c51e2148bbcfb07c45be94b99283deabab28"
+  selectors:
+    - unix:uid:503
